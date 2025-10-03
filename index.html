@@ -1,4 +1,4 @@
-html
+```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -7,14 +7,31 @@ html
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="quiz-container">
-    <h2>Qui me connaît le mieux?</h2>
-    <div id="question"></div>
-    <div id="answers"></div>
-    <button onclick="nextQuestion()">Suivant</button>
-  </div>
-  <div id="result" style="display:none;"></div>
+  <div class="intro-container">
+    <h1>🎉 Défi d'amitié 🎉</h1>
+    <p class="subtitle">Que savent tes amis de toi?</p>
 
-  <script src="script.js"></script>
+    <div class="steps">
+      <p>1️⃣ Crée ton défi personnalisé</p>
+      <p>2️⃣ Envoie-le à tes amis</p>
+      <p>3️⃣ Vérifie leurs réponses</p>
+    </div>
+
+    <input type="text" id="username" placeholder="Votre nom">
+    <br><br>
+    <button onclick="startGame()">Début</button>
+  </div>
+
+  <script>
+    function startGame() {
+      const name = document.getElementById("username").value;
+      if (name.trim() === "") {
+        alert("Veuillez entrer votre nom!");
+} else {
+        window.location.href = "quiz.html?user=" + encodeURIComponent(name);
+}
+}
+  </script>
 </body>
 </html>
+```

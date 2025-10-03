@@ -3,20 +3,17 @@ html
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Défi entre amis</title>
+  <title>Défi d'amitié</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="game-container">
-    <h1>Défi entre amis 🎉</h1>
-    <div id="question-container">
-      <p id="question">Chargement...</p>
-      <div id="answer-buttons" class="btn-group"></div>
-    </div>
-    <button id="next-btn" class="next-btn">Suivant</button>
-    <div id="score" class="score"></div>
+  <div id="quiz-container">
+    <h2>Qui me connaît le mieux?</h2>
+    <div id="question"></div>
+    <div id="answers"></div>
+    <button onclick="nextQuestion()">Suivant</button>
   </div>
+  <div id="result" style="display:none;"></div>
 
   <script src="script.js"></script>
 </body>
